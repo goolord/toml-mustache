@@ -4,14 +4,19 @@ use std::fs::File;
 use std::io;
 use std::io::prelude::*;
 use std::path::Path;
-use toml::Value;
 use std::path::PathBuf;
 use structopt::StructOpt;
+use toml::Value;
 
 #[derive(Debug, StructOpt)]
-#[structopt(name = "toml_mustache", about = "render mustache templates using toml", version = "1.0", author = "Zachary Churchill <zacharyachurchill@gmail.com>")]
+#[structopt(
+    name = "toml_mustache",
+    about = "render mustache templates using toml",
+    version = "1.0",
+    author = "Zachary Churchill <zacharyachurchill@gmail.com>"
+)]
 struct Opt {
-    #[structopt(long, help = "input template file" )]
+    #[structopt(long, help = "input template file")]
     template: PathBuf,
     #[structopt(long, help = "toml object file, to be applied to the template")]
     object: PathBuf,
