@@ -9,4 +9,4 @@ edition = "2018"
 [dependencies]
 mustache = "0.9.0"
 toml = "0.5.8"
-clap = "2.33.3"
+structopt = "0.3.21"
